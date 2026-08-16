@@ -367,9 +367,9 @@ This project ships as a two-part deployment:
 | ⚙️ Backend | [Vercel](https://vercel.com) | `backend` | Backend auto-detected framework by .env and selecting the file.  Add all backend env vars. |
 
 **After both are live:**
-1. Copy your Render backend URL → set it as `REACT_APP_API_URL` on Vercel
-2. Copy your Vercel frontend URL → set it as `FRONTEND_URL` on Render → redeploy backend
-3. If using MongoDB Atlas, allow network access from `0.0.0.0/0` so Render can connect
+1. Copy your Vercel backend URL → set it as `REACT_APP_API_URL` on Vercel
+2. Copy your Vercel frontend URL → set it as `FRONTEND_URL` on Vercel → redeploy backend
+3. If using MongoDB Atlas, allow network access from `0.0.0.0/0` so Vercel can connect
 
 ---
 
