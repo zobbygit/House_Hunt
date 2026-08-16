@@ -135,10 +135,14 @@ Every interaction — booking a viewing, messaging an owner, saving a favorite �
 ## 📁 Project Structure
 
 
-<h2 align="center">🏠 House Hunt — Project Structure</h2>
-
 <p align="center">
-  A full-stack house rental and property listing platform built with React, Node.js, Express, MongoDB and Cloudinary.
+ <p>
+  House Hunt follows a clean full-stack architecture with separate
+  <b>frontend</b> and <b>backend</b> applications, organized into
+  reusable components, features, controllers, routes, middleware,
+  schemas, and configuration modules.
+</p>
+
 </p>
 
 <br>
