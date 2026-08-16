@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../styles/header.css";
 import ProfilePopup from "./ProfilePopup";
@@ -71,31 +71,45 @@ export default function LoginHeader() {
     return () => clearInterval(intervalId);
   }, [user?.id, user?.role]);
 
-  async function fetchPendingCount() {
-    if (!user || !token) return;
 
-    try {
-      const url =
-        user.role === "owner"
-          ? `${API_BASE}/api/bookings/owner`
-          : `${API_BASE}/api/bookings/mine`;
 
-      const res = await fetch(url, {
-        headers: { Authorization: `Bearer ${token}` },
-        cache: "no-store",
-      });
 
-      if (!res.ok) return;
 
-      const data = await res.json();
+const fetchPendingCount = useCallback(async () => {
+  if (!user || !token) return;
 
-      const count = (data.bookings || []).filter(
-        (b) => b.bookingStatus === "pending"
-      ).length;
+  try {
+    const url =
+      user.role === "owner"
+        ? `${API_BASE}/api/bookings/owner`
+        : `${API_BASE}/api/bookings/mine`;
 
-      setPendingCount(count);
-    } catch (_) {}
-  }
+    const res = await fetch(url, {
+      headers: { Authorization: `Bearer ${token}` },
+      cache: "no-store",
+    });
+
+    if (!res.ok) return;
+
+    const data = await res.json();
+
+    const count = (data.bookings || []).filter(
+      (b) => b.bookingStatus === "pending"
+    ).length;
+
+    setPendingCount(count);
+  } catch (_) {}
+}, [user, token]);
+
+useEffect(() => {
+  if (!user || !token) return;
+
+  fetchPendingCount();
+
+  const intervalId = setInterval(fetchPendingCount, 10000);
+
+  return () => clearInterval(intervalId);
+}, [user, token, fetchPendingCount]);
 
   function handleLogout() {
     localStorage.removeItem("token");
