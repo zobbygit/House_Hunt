@@ -137,8 +137,9 @@ Every interaction — booking a viewing, messaging an owner, saving a favorite �
 
 <h2 align="center">🏠 House Hunt — Project Structure</h2>
 
-<details>
-<summary><b>📂 Click to view project structure</b></summary>
+<p align="center">
+  A full-stack house rental and property listing platform built with React, Node.js, Express, MongoDB and Cloudinary.
+</p>
 
 <br>
 
@@ -244,9 +245,6 @@ house_hunt/
 ├── ⚙️ .hintrc
 └── 📝 README.md
 </pre>
-
-</details>
-```
 
 ---
 
