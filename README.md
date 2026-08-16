@@ -364,7 +364,7 @@ This project ships as a two-part deployment:
 | | Service | Root Directory | Notes |
 |---|---|---|---|
 | 🎨 Frontend | [Vercel](https://vercel.com) | `frontend` | Framework auto-detected (CRA). Add `REACT_APP_API_URL` env var. |
-| ⚙️ Backend | [Render](https://render.com) | `backend` | Build: `npm install` · Start: `npm start`. Add all backend env vars. |
+| ⚙️ Backend | [Vercel](https://vercel.com) | `backend` | Backend auto-detected framework by .env and selecting the file.  Add all backend env vars. |
 
 **After both are live:**
 1. Copy your Render backend URL → set it as `REACT_APP_API_URL` on Vercel
