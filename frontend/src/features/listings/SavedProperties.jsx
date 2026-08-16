@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import LoginHeader from "../../components/LoginHeader";
 import PropertyCard from "../../components/PropertyCard";
 import { API_BASE } from "../../config/api";

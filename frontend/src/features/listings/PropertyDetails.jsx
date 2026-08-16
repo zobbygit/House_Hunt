@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import{ useEffect, useState } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import LoginHeader from "../../components/LoginHeader";
 import { API_BASE } from "../../config/api";
