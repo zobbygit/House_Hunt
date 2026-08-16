@@ -62,16 +62,6 @@ export default function LoginHeader() {
     location.pathname
   );
 
-  useEffect(() => {
-    if (!user || !token) return;
-
-    fetchPendingCount();
-    const intervalId = setInterval(fetchPendingCount, 10000);
-
-    return () => clearInterval(intervalId);
-  }, [user?.id, user?.role]);
-
-
 
 
 
