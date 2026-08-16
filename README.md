@@ -134,92 +134,118 @@ Every interaction — booking a viewing, messaging an owner, saving a favorite �
 
 ## 📁 Project Structure
 
-```
-# house_hunt
 
-```
-├── 📁 backend
-│   ├── 📁 config
+<h2 align="center">🏠 House Hunt — Project Structure</h2>
+
+<details>
+<summary><b>📂 Click to view project structure</b></summary>
+
+<br>
+
+<pre>
+house_hunt/
+│
+├── 📁 backend/
+│   ├── 📁 config/
 │   │   ├── 📄 cloudinary.js
 │   │   └── 📄 config.js
-│   ├── 📁 controllers
+│   │
+│   ├── 📁 controllers/
 │   │   ├── 📄 authController.js
 │   │   ├── 📄 bookingController.js
 │   │   ├── 📄 favoriteController.js
 │   │   └── 📄 propertyController.js
-│   ├── 📁 middleware
+│   │
+│   ├── 📁 middleware/
 │   │   ├── 📄 authMiddleware.js
 │   │   ├── 📄 optionalAuthMiddleware.js
 │   │   ├── 📄 roleMiddleware.js
 │   │   └── 📄 uploadMiddleware.js
-│   ├── 📁 routes
+│   │
+│   ├── 📁 routes/
 │   │   ├── 📄 authRoutes.js
 │   │   ├── 📄 bookingRoutes.js
 │   │   ├── 📄 favoriteRoutes.js
 │   │   └── 📄 propertyRoutes.js
-│   ├── 📁 schemas
+│   │
+│   ├── 📁 schemas/
 │   │   ├── 📄 booking.js
 │   │   ├── 📄 favorite.js
 │   │   ├── 📄 property.js
 │   │   └── 📄 user.js
-│   ├── 📁 scripts
+│   │
+│   ├── 📁 scripts/
 │   │   ├── 📄 assignOrphanProperties.js
 │   │   ├── 📄 assignOwnerToProperties.js
 │   │   └── 📄 backfillOwners.js
-│   ├── 📁 test1
+│   │
+│   ├── 📁 test1/
 │   │   ├── 🖼️ test.jpg
 │   │   └── 📄 testCloudinary.js
+│   │
 │   ├── ⚙️ .gitignore
 │   ├── 📄 index.js
 │   ├── ⚙️ package-lock.json
 │   └── ⚙️ package.json
-├── 📁 frontend
-│   ├── 📁 public
+│
+├── 📁 frontend/
+│   ├── 📁 public/
 │   │   ├── 🌐 index.html
 │   │   └── 🖼️ rent.svg
-│   ├── 📁 src
-│   │   ├── 📁 components
+│   │
+│   ├── 📁 src/
+│   │   ├── 📁 components/
 │   │   │   ├── 📄 Footer.jsx
 │   │   │   ├── 📄 LoginHeader.jsx
 │   │   │   ├── 📄 PrivateRoute.jsx
 │   │   │   ├── 📄 ProfilePopup.jsx
 │   │   │   ├── 📄 PropertyCard.jsx
 │   │   │   └── 📄 PropertyMiniGallery.jsx
-│   │   ├── 📁 config
+│   │   │
+│   │   ├── 📁 config/
 │   │   │   └── 📄 api.js
-│   │   ├── 📁 features
-│   │   │   ├── 📁 auth
+│   │   │
+│   │   ├── 📁 features/
+│   │   │   ├── 📁 auth/
 │   │   │   │   ├── 📄 Login.jsx
 │   │   │   │   └── 📄 Register.jsx
-│   │   │   ├── 📁 bookings
+│   │   │   │
+│   │   │   ├── 📁 bookings/
 │   │   │   │   ├── 📄 OwnerBookings.jsx
 │   │   │   │   └── 📄 TenantBookings.jsx
-│   │   │   ├── 📁 dashboard
+│   │   │   │
+│   │   │   ├── 📁 dashboard/
 │   │   │   │   └── 📄 Dashboard.jsx
-│   │   │   ├── 📁 home
+│   │   │   │
+│   │   │   ├── 📁 home/
 │   │   │   │   └── 📄 Home.jsx
-│   │   │   └── 📁 listings
+│   │   │   │
+│   │   │   └── 📁 listings/
 │   │   │       ├── 📄 OwnerListings.jsx
 │   │   │       ├── 📄 PropertyDetails.jsx
 │   │   │       ├── 📄 SavedProperties.jsx
 │   │   │       └── 📄 TenantListings.jsx
-│   │   ├── 📁 styles
+│   │   │
+│   │   ├── 📁 styles/
 │   │   │   ├── 🎨 auth.css
 │   │   │   ├── 🎨 global.css
 │   │   │   └── 🎨 header.css
+│   │   │
 │   │   ├── 📄 App.js
 │   │   └── 📄 index.js
+│   │
 │   ├── ⚙️ .gitignore
 │   ├── 📝 README.md
 │   ├── ⚙️ package-lock.json
 │   ├── ⚙️ package.json
 │   └── ⚙️ vercel.json
+│
 ├── ⚙️ .gitignore
 ├── ⚙️ .hintrc
 └── 📝 README.md
-```
+</pre>
 
----
+</details>
 ```
 
 ---
